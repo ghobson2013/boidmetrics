@@ -1,9 +1,18 @@
-This repo is just some work i have done to visualize the boid.com global statistics.
+# boid.com global metrics project
+
+<p>
+This repo is just some work I have done to visualize the boid.com global statistics.
 If you have any comments or feedback don't hesitate to open a github issue.
 
 This is still very much work in progress, and not considered production ready yet.
 
-## INSTALL PROCESS
+ * https://boid.com
+ * https://app.boid.com
+</p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/ghobson2013/boidmetrics/master/boid.com.grafana.png"></p>
+
+### INSTALL PROCESS
 I tested this on Ubuntu 16.04LTS , but this should work on any debian/ubuntu flavored OS.
 > grab the latest version of prometheus , pushgateway and grafana
 
