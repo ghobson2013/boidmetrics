@@ -27,7 +27,7 @@ pushgateway does not require any configuration so you can start it first.
 
 I then started prometheus as follows:
 ```
-prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.retention.time=90d --storage.tsdb.path /var/spool/prometheus --web.enable-lifecycle --web.enable-admin-ap&>/var/log/prometheus/prometheus.log
+prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.retention.time 90d --storage.tsdb.path /var/spool/prometheus --web.enable-lifecycle --web.enable-admin-api &>/var/log/prometheus/prometheus.log
 ```
 Note: Feel free to use longer retention times if need be.
 
@@ -54,6 +54,13 @@ Now you can test it out by calling:
 ```
 
 If all goes well this should show you the boid.com leader board stats.
+BoidToProm.py requires the following python modules: requests and prometheus_client
+```
+apt install pip
+pip install requests
+pip install prometheus_client
+```
+
 You are ready to setup the cronjob, see samples-cron.txt
 
 > WARNING: Do not run this too fast, boid.com only updates every hour or so.
